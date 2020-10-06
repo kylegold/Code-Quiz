@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#view-highscores {
+  margin-top: 5px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: #790a79d5;
+}
+
+#quiz-counter {
+  margin-right: 50px;
+  margin-top: 5px;
+}
+
+main h1,
+main p {
+  text-align: center;
+}
+main h1 {
+  margin-top: 60px;
+  font-size: 80px;
+}
+main p {
+  margin-top: 30px;
+  font-size: 30px;
+}
