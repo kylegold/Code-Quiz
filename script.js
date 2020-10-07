@@ -1,6 +1,7 @@
 // Dependencies
 var counter = document.getElementById('counter');
 var startQuiz = document.getElementById('start-quiz');
+var startContainer = document.getElementById('startContainer');
 
 var questionsArray = [
   'Commonly used data types DO NOT include:',
@@ -23,6 +24,7 @@ var answerArray = [
 // timer start
 var secondsLeft = 20;
 startQuiz.addEventListener('click', function () {
+  startContainer.setAttribute('style', 'display: none');
   counter.textContent = secondsLeft;
   var timerInterval = setInterval(function () {
     secondsLeft--;
@@ -30,7 +32,7 @@ startQuiz.addEventListener('click', function () {
 
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
-      counter.textContent = ' ';
+      //   counter.textContent = ' ';
     }
   }, 1000);
 });
