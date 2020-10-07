@@ -4,9 +4,6 @@
   padding: 0;
 }
 
-body {
-}
-
 header {
   width: 100%;
   height: auto;
@@ -52,4 +49,23 @@ main button {
   color: white;
   font-size: 22px;
   padding: 5px;
+}
+
+.questionsContainer {
+  background-color: lightgray;
+  width: 60%;
+  margin: 100px auto;
+}
+.questionsContainer h2 {
+  padding: 20px;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+}
+.answers button {
+  width: 200px;
+  height: 40px;
+  margin: 20px;
 }
