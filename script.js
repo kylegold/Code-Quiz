@@ -1,3 +1,7 @@
+// Dependencies
+var counter = document.getElementById('counter');
+var startQuiz = document.getElementById('start-quiz');
+
 var questionsArray = [
   'Commonly used data types DO NOT include:',
   'The condition in an if / else statement is enclosed within _____.',
@@ -16,11 +20,21 @@ var answerArray = [
   [['Javascript'], ['terminal/bash'], ['for loops'], ['console log']],
 ];
 
-// increment count on timer when start button is clicked
-var counter = document.getElementById('counter');
-counter.textContent = '22';
-document.body.span.appendChild(counter);
-// access question from question array
+// timer start
+var secondsLeft = 20;
+startQuiz.addEventListener('click', function () {
+  counter.textContent = secondsLeft;
+  var timerInterval = setInterval(function () {
+    secondsLeft--;
+    counter.textContent = secondsLeft;
+
+    if (secondsLeft === 0) {
+      clearInterval(timerInterval);
+      counter.textContent = ' ';
+    }
+  }, 1000);
+});
+
 var question = document.createElement('h2');
 question.textContent(questionsArray[0]);
 document.body.appendChild(question);
