@@ -5,24 +5,38 @@ var startQuiz = document.getElementById('start-quiz');
 var startContainer = document.getElementById('startContainer');
 var quizContainer = document.getElementById('quizContainer');
 
-var questionsArray = [
-  'Commonly used data types DO NOT include:',
-  'The condition in an if / else statement is enclosed within _____.',
-  'Arrays within Javascript can be used to store _____.',
-  'String values must be enclosed within _____ when be assigned to variables',
-];
-var answerArray = [
-  [['strings'], ['booleans'], ['alerts'], ['numbers']],
-  [['quotes'], ['curly brackets'], ['parentheses'], ['square brackets']],
-  [
-    ['numbers and strings'],
-    ['other arrays'],
-    ['booleans'],
-    ['all of the above'],
-  ],
-  [['Javascript'], ['terminal/bash'], ['for loops'], ['console log']],
-];
+var questions = [
+  {
+    question: 'Commonly used data types DO NOT include:',
+    choices: ['strings', 'booleans', 'alerts', 'numbers'],
+    answer: 2,
+  },
 
+  {
+    question:
+      'The condition in an if / else statement is enclosed within _____.',
+    choices: ['quotes', 'curly brackets', 'parentheses'],
+    answer: 2,
+  },
+
+  {
+    question: 'Arrays within Javascript can be used to store _____.',
+    choices: [
+      'numbers and strings',
+      'other arrays',
+      'booleans',
+      'all of the above',
+    ],
+    answer: 2,
+  },
+
+  {
+    question:
+      'String values must be enclosed within _____ when be assigned to variables',
+    choices: ['Javascript', 'terminal/bash', 'for loops', 'console log'],
+    answer: 2,
+  },
+];
 // timer start
 var secondsLeft = 20;
 
@@ -46,6 +60,7 @@ function startGame() {
   quizTimer();
   startContainer.setAttribute('class', 'hide');
   quizContainer.classList.remove('hide');
+  questions.question.forEach((question) => {});
   //quiz container needs to populate first question and first choices
   // steps to populate first question
   // iterate through question array
