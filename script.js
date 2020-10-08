@@ -1,7 +1,9 @@
 // Dependencies
+var highScore = document.getElementById('view-highscores');
 var counter = document.getElementById('counter');
 var startQuiz = document.getElementById('start-quiz');
 var startContainer = document.getElementById('startContainer');
+var quizContainer = document.getElementById('quizContainer');
 
 var questionsArray = [
   'Commonly used data types DO NOT include:',
@@ -23,8 +25,11 @@ var answerArray = [
 
 // timer start
 var secondsLeft = 20;
-startQuiz.addEventListener('click', function () {
-  startContainer.setAttribute('style', 'display: none');
+
+startQuiz.addEventListener('click', startGame);
+
+// Timer Function
+function quizTimer() {
   counter.textContent = secondsLeft;
   var timerInterval = setInterval(function () {
     secondsLeft--;
@@ -32,12 +37,21 @@ startQuiz.addEventListener('click', function () {
 
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
-      //   counter.textContent = ' ';
     }
   }, 1000);
-});
+}
 
-var question = document.createElement('h2');
-question.textContent(questionsArray[0]);
-document.body.appendChild(question);
-// place question
+function startGame() {
+  console.log('click');
+  quizTimer();
+  startContainer.setAttribute('class', 'hide');
+  quizContainer.classList.remove('hide');
+  //quiz container needs to populate first question and first choices
+  // steps to populate first question
+  // iterate through question array
+  // set current index
+  // get question at index
+  // get answers at index
+}
+
+function nextQuestion() {}

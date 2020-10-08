@@ -51,12 +51,12 @@ main button {
   padding: 5px;
 }
 
-.questionsContainer {
+#quizContainer {
   background-color: lightgray;
   width: 60%;
   margin: 100px auto;
 }
-.questionsContainer h2 {
+#quizContainer h2 {
   padding: 20px;
 }
 
@@ -68,4 +68,8 @@ main button {
   width: 200px;
   height: 40px;
   margin: 20px;
+}
+
+.hide {
+  display: none;
 }
